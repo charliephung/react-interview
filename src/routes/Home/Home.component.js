@@ -55,9 +55,17 @@ const Home = () => {
     }
 
     //Click on remove todo
-    const onRemoveClick = (id) => {
-        //implement this logic
-        console.log('Remove Item!');
+    const onRemoveClick = (todoId) => {
+        var newTodos = todos.slice();
+
+        //find todo index
+        var todoRemoveIndex = newTodos.map(todo => todo.id).indexOf(todoId);
+
+        //remove todo
+        newTodos.splice(todoRemoveIndex, 1);
+
+        //set new todos
+        setTodos(newTodos);
     }
 
     //Todo list
