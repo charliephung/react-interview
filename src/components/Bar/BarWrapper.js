@@ -2,19 +2,19 @@ import React from 'react';
 import './Bar.css';
 
 const barWrapper = (props) => {
-    var color;
     var text;
+    var textDecoration = 'line-through';
 
     if (props.todo.complete === true) {
-        color = 'lightgreen';
         text = 'Complete';
+        textDecoration = 'line-through';
     } else {
-        color = 'pink';
         text = 'Incomplete';
+        textDecoration = 'none';
     }
     return (
-        <div className="wrapper" data-testid="todo" style={{backgroundColor: color}}>
-            <h3>{props.todo.name}</h3>
+        <div className="wrapper" data-testid="todo">
+            <h3 style={{textDecoration: textDecoration}}>{props.todo.name}</h3>
             <button
                 className="btn"
                 onClick={() => props.onClick(props.todo.id)}>

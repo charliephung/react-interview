@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import BarInput from '../../components/Bar/BarInput';
 import BarWrapper from '../../components/Bar/BarWrapper';
+import classes from '../../components/Bar/Bar.css';
 
 const Home = () => {
 
@@ -87,7 +88,7 @@ const Home = () => {
     };
 
     return (
-        <div className="">
+        <div className={classes.todoList}>
             {todoItems()}
             <BarInput
                 onSubmit={onSubmit.bind(this)}
