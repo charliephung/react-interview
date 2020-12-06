@@ -13,7 +13,7 @@ const barWrapper = (props) => {
         text = 'Incomplete';
     }
     return (
-        <div className="wrapper" style={{backgroundColor: color}}>
+        <div className="wrapper" data-testid="todo" style={{backgroundColor: color}}>
             <h3>{props.todo.name}</h3>
             <button
                 className="btn"
